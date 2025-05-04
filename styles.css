@@ -12,7 +12,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center/cover;
+  background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center/cover; /* Mantenemos el fondo previo */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Superposición oscura */
   z-index: 1;
 }
 
@@ -68,15 +68,23 @@ body {
   font-weight: 600;
 }
 
+/* Estilo del Botón */
 .intro-button {
-  background-color: #d4af37;
+  background-color: #a67c52; /* Dorado oscuro */
   color: white;
-  padding: 12px 30px;
+  padding: 14px 30px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border-radius: 8px;
   transition: background-color 0.3s ease;
   font-weight: 600;
+  border: 2px solid #d4af37; /* Borde dorado refinado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra sutil */
+}
+
+.intro-button:hover {
+  background-color: #8c6239; /* Dorado más oscuro */
+  border-color: #8c6239; /* Sombra dorada más oscura */
 }
 
 .intro-button:hover {
