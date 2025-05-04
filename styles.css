@@ -1,129 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulario de Contacto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
-      color: #f2e9dc;
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a); /* Fondo oscuro */
+  color: #f2e9dc; /* Texto claro */
+  font-family: 'Playfair Display', serif; /* Tipografía refinada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .form-container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
-      position: relative;
-      overflow: hidden;
-    }
+.form-container {
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #f9f6ef;
-    }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d4af37; /* Dorado */
+  font-weight: 600;
+}
 
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: #2c2c2c;
-      color: #f2e9dc;
-    }
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #d4af37; /* Borde dorado */
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #2c2c2c;
+  color: #f2e9dc;
+}
 
-    input::placeholder {
-      color: #aaa;
-    }
+input::placeholder {
+  color: #aaa;
+}
 
-    button {
-      background-color: #a67c52;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+button {
+  background-color: #d4af37; /* Dorado */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    button:hover {
-      background-color: #8c6239;
-    }
+button:hover {
+  background-color: #c2952f; /* Dorado más oscuro */
+}
 
-    /* Efecto de destellos violeta y dorado */
-    .sparkle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #9b4dca, #ffd700, #9b4dca, #ffd700);
-      background-size: 400% 400%;
-      animation: shimmer 4s infinite linear;
-      z-index: -1;
-      opacity: 0.5;
-    }
+.message {
+  display: none;
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    @keyframes shimmer {
-      0% { background-position: 0 0; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0 0; }
-    }
-
-    .message {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      color: #ffd700;
-      font-weight: bold;
-      display: none; /* Inicialmente oculto */
-    }
-  </style>
-</head>
-<body>
-  <div class="form-container">
-    <h1>¿Tú quién eliges ser?</h1>
-    <form id="contactForm">
-      <label for="nombre">Tu nombre:</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
-      
-      <label for="telefono">Tu número de teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
-      
-      <button type="submit">Enviar</button>
-    </form>
-
-    <div class="message" id="thankYouMessage">Gracias, ¡estamos en contacto!</div>
-  </div>
-
-  <div class="sparkle"></div>
-
-  <script>
-    document.querySelector('#contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevenir la recarga de la página
-      window.location.href = 'gracias.html'; // Redirigir a gracias.html
-
-      // Mostrar mensaje de agradecimiento
-      setTimeout(function() {
-        document.querySelector('#thankYouMessage').style.display = 'block';
-      }, 500); // Aparece después de un breve delay
-    });
-  </script>
-</body>
-</html>
+.sparkle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/sparkle.png') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
