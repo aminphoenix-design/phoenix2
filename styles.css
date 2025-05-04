@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía */
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+  background: #000;
+  color: #fff;
+}
+
+/* ——— INTRO SECCIÓN FULLSCREEN ——— */
+.intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: url('assets/images/intro.png') center/cover no-repeat;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Capa oscura encima de la imagen para contraste */
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Runas a los lados */
+.runes-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 101;
+}
+.runes-side.left { left: 5%; }
+.runes-side.right { right: 5%; }
+
+.rune {
+  font-size: 1.75rem;
+  color: #f5c85f;
+  text-shadow: 0 0 10px rgba(245,200,95,0.8);
+  opacity: 0;
+  animation: runeFadeIn 1s forwards;
+}
+
+/* Delays escalonados para un efecto cascada */
+.runes-side.left .rune:nth-child(1) { animation-delay: 0.5s; }
+.runes-side.left .rune:nth-child(2) { animation-delay: 1s; }
+.runes-side.left .rune:nth-child(3) { animation-delay: 1.5s; }
+.runes-side.left .rune:nth-child(4) { animation-delay: 2s; }
+.runes-side.left .rune:nth-child(5) { animation-delay: 2.5s; }
+.runes-side.right .rune:nth-child(1) { animation-delay: 0.75s; }
+.runes-side.right .rune:nth-child(2) { animation-delay: 1.25s; }
+.runes-side.right .rune:nth-child(3) { animation-delay: 1.75s; }
+.runes-side.right .rune:nth-child(4) { animation-delay: 2.25s; }
+.runes-side.right .rune:nth-child(5) { animation-delay: 2.75s; }
+
+@keyframes runeFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenido central */
+.intro-content {
+  position: relative;
+  z-index: 102;
+  text-align: center;
+  color: #f5c85f;
+}
+
+.intro-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(245,200,95,0.9);
+  opacity: 0;
+  animation: titleFadeIn 1.5s forwards 1s;
+}
+
+@keyframes titleFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Botón FUTURO */
+.intro-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 3rem;
+  font-size: 1.25rem;
+  color: #000;
+  background: #f5c85f;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(245,200,95,0.8);
+  opacity: 0;
+  animation: btnFadeIn 1s forwards 2s;
+  transition: background 0.3s;
+}
+
+.intro-button:hover {
+  background: #e0b85a;
+}
+
+@keyframes btnFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- PUERTA ---------- */
+.puerta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/puerta.png') no-repeat center center;
+  background-size: cover;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.puerta.visible {
+  opacity: 1;
+}
+
+.puerta.abierta {
+  animation: abrirPuerta 2s forwards;
+}
+
+@keyframes abrirPuerta {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
+/* ---------- LOGO + BOTÓN ---------- */
+.logo-final {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 4;
+}
+
+.logo-final img {
+  width: 200px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.intro-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.intro-button:hover {
+  background-color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- VIDEO PAGE ---------- */
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+/* ---------- FORMULARIO ---------- */
+.formulario-body {
+  background: url('assets/intro.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.formulario-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.formulario-titulo {
+  font-size: 1.8rem;
+  color: #f2e9dc;
+  margin-bottom: 20px;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #f2e9dc;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: #f2e9dc;
+  box-shadow: 0 0 8px rgba(242, 233, 220, 0.6);
+}
+
+.formulario button {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #444;
+}
+
+/* Estilo para los campos del formulario */
+.formulario input::placeholder {
+  color: rgba(242, 233, 220, 0.5);
+}
+
+/* Para la transición de las sombras y bordes */
+.formulario input:focus {
+  box-shadow: 0 0 12px rgba(242, 233, 220, 0.8);
+}
+
+/* ---------- GRACIAS ---------- */
+.gracias-body {
+  background: url('assets/intro.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.gracias-container h1 {
+  font-size: 2rem;
+  color: #f2e9dc;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
