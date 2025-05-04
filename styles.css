@@ -1,83 +1,85 @@
+/* Estilos Generales */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a); /* Fondo oscuro */
-  color: #f2e9dc; /* Texto claro */
-  font-family: 'Playfair Display', serif; /* Tipografía refinada */
+  font-family: 'Playfair Display', serif;
+  color: #f2e9dc;
+  background-color: #0d0d0d; /* Fondo oscuro */
+}
+
+/* Sección Fullscreen */
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.form-container {
-  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
   text-align: center;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #d4af37; /* Dorado */
-  font-weight: 600;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 2px solid #d4af37; /* Borde dorado */
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #2c2c2c;
   color: #f2e9dc;
 }
 
-input::placeholder {
-  color: #aaa;
-}
-
-button {
-  background-color: #d4af37; /* Dorado */
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #c2952f; /* Dorado más oscuro */
-}
-
-.message {
-  display: none;
-  color: #d4af37;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  font-weight: 600;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.sparkle {
+/* Superposición oscura */
+.intro-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/sparkle.png') repeat;
-  opacity: 0.1;
-  pointer-events: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
+
+/* Runas laterales */
+.runes-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.runes-side.left {
+  left: 20px;
+}
+
+.runes-side.right {
+  right: 20px;
+}
+
+.rune {
+  font-size: 2rem;
+  color: #d4af37; /* Dorado */
+  margin: 10px 0;
+}
+
+/* Contenido principal */
+.intro-content {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  padding: 20px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #d4af37; /* Dorado */
+  font-weight: 600;
+}
+
+.intro-button {
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.intro-button:hover {
+  background-color: #c2952f; /* Dorado más oscuro */
+}
+
