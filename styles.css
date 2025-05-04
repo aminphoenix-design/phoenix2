@@ -1,93 +1,86 @@
-/* Estilos Generales */
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
-  color: #f2e9dc;
-  background-color: #0d0d0d; /* Fondo oscuro */
+  box-sizing: border-box;
 }
 
-/* Sección Fullscreen */
-.intro {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center/cover; /* Mantenemos el fondo previo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #f2e9dc;
-}
-
-/* Superposición oscura */
-.intro-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+body, html {
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Superposición oscura */
+  font-family: 'Playfair Display', serif;
+}
+
+/* Fondo con imagen de la puerta */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('fondo-puerta.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Capa oscura encima si hace falta suavizar */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
-/* Runas laterales */
-.runes-side {
+/* Texto y botón */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #ffe599;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #d4af37;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Runas */
+.runes {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: #d4af37;
 }
 
-.runes-side.left {
+.runes.left {
   left: 20px;
 }
 
-.runes-side.right {
+.runes.right {
   right: 20px;
-}
-
-.rune {
-  font-size: 2rem;
-  color: #d4af37; /* Dorado */
-  margin: 10px 0;
-}
-
-/* Contenido principal */
-.intro-content {
-  position: relative;
-  z-index: 2;
-  max-width: 80%;
-  padding: 20px;
-}
-
-.intro-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #d4af37; /* Dorado */
-  font-weight: 600;
-}
-
-/* Estilo del Botón */
-.intro-button {
-  background-color: #a67c52; /* Dorado oscuro */
-  color: white;
-  padding: 14px 30px;
-  text-decoration: none;
-  font-size: 1.4rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-  border: 2px solid #d4af37; /* Borde dorado refinado */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra sutil */
-}
-
-.intro-button:hover {
-  background-color: #8c6239; /* Dorado más oscuro */
-  border-color: #8c6239; /* Sombra dorada más oscura */
-}
-
-.intro-button:hover {
-  background-color: #c2952f; /* Dorado más oscuro */
 }
 
