@@ -3,7 +3,6 @@
   background-image: url('assets/images/intro.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
   font-family: 'Georgia', serif;
@@ -42,6 +41,7 @@
   background-color: #8a5c36;
 }
 
+
 /* ==================== VIDEO PAGE ==================== */
 .video-page {
   margin: 0;
@@ -66,39 +66,42 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2em;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.6);
   padding: 12px 24px;
   border-radius: 10px;
   color: white;
 }
 
-/* ==================== FORMULARIO OSCURO ==================== */
+
+/* ==================== FORMULARIO ==================== */
 body.formulario-dark {
   background-image: url('assets/images/Capturap2.PNG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   margin: 0;
   font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  color: white;
 }
 
 .form-container.dark {
-  background-color: rgba(26, 26, 26, 0.85);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 50px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(255,255,255,0.1);
   text-align: center;
   width: 100%;
   max-width: 600px;
+  color: white;
 }
 
 label {
   font-weight: bold;
-  color: #ddd;
+  color: white;
   display: block;
   text-align: left;
   margin-bottom: 6px;
@@ -130,9 +133,10 @@ button:hover {
   background-color: #8a5c36;
 }
 
+
 /* ==================== GRACIAS ==================== */
 body.gracias-page {
-  background-image: url('assets/images/phoenix.PNG');
+  background-image: url('assets/images/Capturap.PNG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,36 +146,55 @@ body.gracias-page {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .thank-you-box {
   background-color: rgba(26, 26, 26, 0.85);
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  color: #f5f5f5;
   max-width: 600px;
 }
 
+
 /* ==================== LOGIN ==================== */
 body.login-page {
-  background-image: url('assets/images/phoenix.PNG');
+  background-image: url('assets/images/Capturap.PNG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   margin: 0;
   font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  color: white;
 }
 
 .login-container {
-  background-color: rgba(26, 26, 26, 0.85);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
   text-align: center;
   width: 100%;
   max-width: 400px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
