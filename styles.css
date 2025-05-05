@@ -14,7 +14,7 @@ body.login-page,
 body.formulario-dark,
 body.thank-you-page {
   background-image: url('assets/images/phoenix.PNG');
-  background-size: cover;  /* Asegura que la imagen cubra el fondo */
+  background-size: 100% 100%;  /* Asegura que la imagen se estire para cubrir todo el fondo */
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -26,7 +26,7 @@ body.thank-you-page {
 
 body.index-page {
   background-image: url('assets/images/intro.png');
-  background-size: cover;  /* Asegura que la imagen cubra el fondo */
+  background-size: 100% 100%;  /* Asegura que la imagen se estire para cubrir todo el fondo */
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -214,4 +214,3 @@ button:hover {
   border-radius: 10px;
   color: white;
 }
-
