@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formulario de Contacto</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="form-body">
   <div class="form-container">
     <h1>¿Tú quién eliges ser?</h1>
     <form id="contactForm">
@@ -23,22 +23,11 @@
     <div class="message" id="thankYouMessage">Gracias, ¡estamos en contacto!</div>
   </div>
 
-  <div class="sparkle"></div>
-
   <script>
     document.querySelector('#contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevenir la recarga de la página
-      window.location.href = 'gracias.html'; // Redirigir a gracias.html
-
-      // Mostrar mensaje de agradecimiento
-      setTimeout(function() {
-        document.querySelector('#thankYouMessage').style.display = 'block';
-      }, 500); // Aparece después de un breve delay
+      event.preventDefault();
+      document.querySelector('#thankYouMessage').style.display = 'block';
     });
   </script>
 </body>
 </html>
-
-</body>
-</html>
-
