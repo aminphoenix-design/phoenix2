@@ -2,50 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transición</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
-    }
-
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: 1;
-    }
-  </style>
 </head>
-<body>
-
-  <video id="transitionVideo" autoplay muted playsinline>
+<body class="video-page">
+  <video autoplay muted playsinline class="fullscreen-video">
     <source src="assets/video.mp4" type="video/mp4" />
-    Tu navegador no admite el elemento de video.
+    Tu navegador no soporta video HTML5.
   </video>
-
-  <script>
-    const video = document.getElementById("transitionVideo");
-
-    // Cuando el vídeo termine, redirige
-    video.addEventListener("ended", () => {
-      window.location.href = "formulario.html";
-    });
-
-    // Fallback por si el evento "ended" falla (muy raro pero puede pasar)
-    setTimeout(() => {
-      if (video.ended || video.currentTime > 0) return;
-      window.location.href = "formulario.html";
-    }, 10000); // espera 10 segundos antes de forzar redirección
-  </script>
-
+  <a href="formulario.html" class="btn video-btn">CONTINUAR</a>
 </body>
 </html>
