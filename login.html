@@ -10,25 +10,19 @@
   <div class="login-container">
     <h1>¿Estás preparado?</h1>
     <form id="loginForm">
-      <label for="usuario">Usuario:</label>
-      <input type="text" id="usuario" name="usuario" required>
-
-      <label for="contrasena">Contraseña:</label>
-      <input type="password" id="contrasena" name="contrasena" required>
-
+      <input type="text" id="username" placeholder="Usuario" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
       <button type="submit">Entrar</button>
+      <p id="error" class="error-message"></p>
     </form>
-    <p id="error" class="error-msg"></p>
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const usuario = document.getElementById("usuario").value;
-      const contrasena = document.getElementById("contrasena").value;
-
-      if (usuario === "amin" && contrasena === "phoenixframe") {
-        localStorage.setItem("logueado", "true");
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "amin" && pass === "phoenixframe") {
         window.location.href = "index.html";
       } else {
         document.getElementById("error").textContent = "Usuario o contraseña incorrectos.";
