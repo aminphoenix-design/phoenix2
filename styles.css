@@ -13,7 +13,7 @@ body {
 body.login-page,
 body.formulario-dark,
 body.thank-you-page {
-  background-image: url('assets/images/phoenix.PNG');
+  background-image: url('assets/images/Capturap.PNG');
   background-size: cover;  /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
   background-position: center;
   background-repeat: no-repeat;
