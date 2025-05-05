@@ -1,4 +1,4 @@
-/* Fondo portada */
+/* ==================== INDEX PAGE ==================== */
 .index-page {
     background-image: url('assets/images/imagen de fondo.jpg');
     background-size: cover;
@@ -30,7 +30,7 @@
     display: inline-block;
     background-color: #a67c52;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
@@ -41,7 +41,8 @@
     background-color: #8a5c36;
 }
 
-/* VIDEO PAGE */
+
+/* ==================== VIDEO PAGE ==================== */
 .video-page {
     margin: 0;
     padding: 0;
@@ -68,9 +69,11 @@
     background-color: rgba(0,0,0,0.6);
     padding: 12px 24px;
     border-radius: 10px;
+    color: white;
 }
 
-/* FORMULARIO OSCURO */
+
+/* ==================== FORMULARIO OSCURO ==================== */
 .formulario-dark {
     background-color: #0c0c0c;
     color: #f5f5f5;
@@ -84,29 +87,37 @@
 
 .form-container.dark {
     background-color: #1a1a1a;
-    padding: 30px;
+    padding: 50px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(255,255,255,0.05);
     text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 label {
     font-weight: bold;
     color: #ddd;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
 }
 
 input {
-    padding: 10px;
+    padding: 14px;
     background-color: #2a2a2a;
     border: 1px solid #444;
     border-radius: 6px;
     color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1em;
 }
 
 button {
     background-color: #a67c52;
     color: white;
-    padding: 10px;
+    padding: 12px 24px;
     border: none;
     border-radius: 6px;
     font-size: 1em;
@@ -117,3 +128,9 @@ button {
 button:hover {
     background-color: #8a5c36;
 }
+
+
+/* ==================== GRACIAS ==================== */
+.thank-you-box {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding
