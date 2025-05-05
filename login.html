@@ -6,26 +6,35 @@
   <title>Login</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="login-page">
-  <div class="login-container">
+<body class="formulario-dark login-bg">
+  <div class="form-container dark">
     <h1>¿Estás preparado?</h1>
     <form id="loginForm">
-      <input type="text" id="username" placeholder="Usuario" required />
-      <input type="password" id="password" placeholder="Contraseña" required />
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" required />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" required />
+
       <button type="submit">Entrar</button>
-      <p id="error" class="error-message"></p>
+      <p id="error" style="color:red; margin-top:10px;"></p>
     </form>
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-      if (user === "amin" && pass === "phoenixframe") {
-        window.location.href = "index.html";
+    const form = document.getElementById("loginForm");
+    const errorText = document.getElementById("error");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // evita recarga automática
+
+      const usuario = document.getElementById("usuario").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (usuario === "amin" && password === "phoenixframe") {
+        window.location.href = "index.html"; // redirige solo si es correcto
       } else {
-        document.getElementById("error").textContent = "Usuario o contraseña incorrectos.";
+        errorText.textContent = "Credenciales incorrectas. Intenta de nuevo.";
       }
     });
   </script>
