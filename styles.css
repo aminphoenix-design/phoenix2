@@ -133,4 +133,69 @@ button:hover {
 /* ==================== GRACIAS ==================== */
 .thank-you-box {
     background-color: rgba(26, 26, 26, 0.9);
-    padding
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+/* ==================== LOGIN ==================== */
+.login-page {
+    background-image: url('assets/images/imagen de fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f5f5f5;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    backdrop-filter: blur(2px);
+}
+
+.login-box {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #f8e7c1;
+}
+
+.login-box input {
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.login-box button {
+    background-color: #a67c52;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #8a5c36;
+}
+
