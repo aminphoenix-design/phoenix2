@@ -12,8 +12,20 @@ body {
 /* ==================== FONDO DE IMAGEN ==================== */
 body.login-page,
 body.formulario-dark,
-body.index-page {
+body.thank-you-page {
   background-image: url('assets/images/phoenix.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.index-page {
+  background-image: url('assets/images/intro.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
