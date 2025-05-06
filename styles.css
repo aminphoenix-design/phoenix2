@@ -1,200 +1,165 @@
 /* ==================== INDEX PAGE ==================== */
 .index-page {
-  background-image: url('assets/images/intro.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url('assets/images/intro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
-  text-align: center;
-  color: #f5f0e1;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #f5f0e1;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  line-height: 1.5em;
-  background: linear-gradient(to bottom, #f8e7c1, #d2b48c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    background: linear-gradient(to bottom, #f8e7c1, #d2b48c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn {
-  margin-top: 20px;
-  display: inline-block;
-  background-color: #a67c52;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #a67c52;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #8a5c36;
+    background-color: #8a5c36;
 }
 
 
 /* ==================== VIDEO PAGE ==================== */
 .video-page {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .fullscreen-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-btn {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2em;
-  background-color: rgba(0,0,0,0.6);
-  padding: 12px 24px;
-  border-radius: 10px;
-  color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    background-color: rgba(0,0,0,0.6);
+    padding: 12px 24px;
+    border-radius: 10px;
+    color: white;
 }
 
 
-/* ==================== FORMULARIO ==================== */
-body.formulario-dark {
-  background-image: url('assets/images/Capturap2.PNG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
+/* ==================== FONDOS PERSONALIZADOS ==================== */
+.login-bg {
+    background-image: url('assets/images/Capturap.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario-bg {
+    background-image: url('assets/images/Capturap2.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gracias-bg {
+    background-image: url('assets/images/Capturap.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ==================== FORMULARIO OSCURO ==================== */
+.formulario-dark {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .form-container.dark {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255,255,255,0.1);
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  color: white;
+    background-color: rgba(26, 26, 26, 0.85);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 label {
-  font-weight: bold;
-  color: white;
-  display: block;
-  text-align: left;
-  margin-bottom: 6px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
 }
 
 input {
-  padding: 14px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-  border-radius: 6px;
-  color: #fff;
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 1em;
+    padding: 14px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1em;
 }
 
 button {
-  background-color: #a67c52;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: #a67c52;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #8a5c36;
+    background-color: #8a5c36;
 }
 
 
 /* ==================== GRACIAS ==================== */
-body.gracias-page {
-  background-image: url('assets/images/Capturap.PNG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 .thank-you-box {
-  background-color: rgba(26, 26, 26, 0.85);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 600px;
-}
-
-
-/* ==================== LOGIN ==================== */
-body.login-page {
-  background-image: url('assets/images/Capturap.PNG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-}
-
-.login-container {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-}
-
-input[type="text"],
-input[type="password"] {
-  padding: 12px;
-  width: 100%;
-  margin-bottom: 20px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-  border-radius: 6px;
-  color: white;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 10px;
+    background-color: rgba(26, 26, 26, 0.85);
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    width: 90%;
 }
