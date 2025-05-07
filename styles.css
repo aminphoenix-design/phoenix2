@@ -1,22 +1,55 @@
-/* Fondo para login */
-body.login-bg {
-  background-image: url("assets/images/Capturap.PNG");
+/* ==================== LOGIN ==================== */
+.login-page {
+  background-image: url('assets/images/login-background.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Georgia', serif;
+  color: white;
 }
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a67c52;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8a5c36;
+}
+
 /* ==================== INDEX ==================== */
 .index-page {
-  background-image: url('assets/images/intro.png'); /* Fondo de la página */
-  background-size: cover; /* Asegura que el fondo cubra toda la página */
+  background-image: url('assets/images/intro.png');
+  background-size: cover;
   background-position: center;
-  height: 100vh; /* Altura de la página completa */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,13 +60,13 @@ body.login-bg {
   font-size: 2.5em;
   line-height: 1.5em;
   color: white;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra para el texto */
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .btn {
   margin-top: 20px;
   display: inline-block;
-  background-color: #a67c52; /* Color del botón */
+  background-color: #a67c52;
   color: white;
   padding: 12px 24px;
   text-decoration: none;
@@ -43,75 +76,103 @@ body.login-bg {
 }
 
 .btn:hover {
-  background-color: #8a5c36; /* Color del botón al pasar el cursor */
+  background-color: #8a5c36;
 }
 
-/* Fondo para formulario */
-body.formulario-bg {
-  background-image: url("assets/images/Capturap2.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* ==================== VIDEO ==================== */
+.video-page {
   margin: 0;
+  padding: 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Georgia', serif;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Fondo para página de gracias */
-body.gracias-bg {
-  background-image: url("assets/images/Capturap.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Georgia', serif;
-}
-
-.form-container,
-.thank-you-box {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  color: white;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-}
-
-form input {
-  display: block;
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 15px 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-btn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ==================== FORMULARIO ==================== */
+.formulario-page {
+  background-image: url('assets/images/Capturap2.PNG');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  color: white;
+}
+
+input {
   padding: 10px;
-  border: none;
-  border-radius: 8px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-form button {
-  background-color: #9b59b6;
-  color: white;
+button {
+  padding: 10px 20px;
+  background-color: #a67c52;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #8e44ad;
+button:hover {
+  background-color: #8a5c36;
 }
 
-h2, p {
+/* ==================== GRACIAS ==================== */
+.thank-you-page {
+  background-image: url('assets/images/Capturap.PNG');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thank-you-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
   color: white;
+}
+
+.thank-you-box h1 {
   margin-bottom: 20px;
 }
 
