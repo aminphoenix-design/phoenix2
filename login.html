@@ -5,11 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - PhoenixFrame</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Comprobar si el usuario ya está logueado
+    window.onload = function() {
+      if (localStorage.getItem("logueado")) {
+        window.location.href = "index.html"; // Si ya está logueado, redirigir a index
+      }
+    }
+
+    // Función para validar login
+    function validarLogin(event) {
+      event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+      const usuario = document.getElementById('usuario').value;
+      const contraseña = document.getElementById('contraseña').value;
+      
+      if (usuario === "amin" && contraseña === "phoenixframe") {
+        // Redirige al index.html si el login es correcto
+        localStorage.setItem("logueado", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+    }
+  </script>
 </head>
 <body class="login-page">
   <div class="login-container">
     <h1>¿Estás preparado?</h1>
-    <form action="index.html" method="POST" onsubmit="return validarLogin()">
+    <form onsubmit="validarLogin(event)">
       <label for="usuario">Usuario:</label>
       <input type="text" id="usuario" name="usuario" required />
       <label for="contraseña">Contraseña:</label>
@@ -17,20 +40,6 @@
       <button type="submit">Entrar</button>
     </form>
   </div>
-
-  <script>
-    function validarLogin() {
-      const usuario = document.getElementById('usuario').value;
-      const contraseña = document.getElementById('contraseña').value;
-      
-      if (usuario === "amin" && contraseña === "phoenixframe") {
-        window.location.href = "index.html"; // Redirige a la página principal si el login es correcto
-        return false; // Evita el envío del formulario
-      } else {
-        alert("Usuario o contraseña incorrectos.");
-        return false; // Bloquea la redirección
-      }
-    }
-  </script>
 </body>
 </html>
+
