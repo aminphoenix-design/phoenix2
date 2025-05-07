@@ -118,10 +118,11 @@ button:hover {
   overflow: hidden; /* Esto asegurará que el video no se desborde */
 }
 
-.video-content {
+.video-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  transform: scale(1.1); /* Aplicamos un pequeño zoom */
+  overflow: hidden; /* Para asegurar que el video no se desborde */
 }
 
 .video-content iframe {
@@ -129,12 +130,33 @@ button:hover {
   height: 100%;
   border: none;
   border-radius: 8px;
-  transform: scale(1.1); /* También aplicamos zoom al iframe */
+  transform: scale(1.1); /* Aplicamos zoom al iframe */
   transition: transform 0.3s ease-in-out;
 }
 
 .video-content iframe:hover {
   transform: scale(1.15); /* Al pasar el ratón sobre el video, se hará más grande */
+}
+
+/* Botón continuar */
+.continuar-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: darkviolet;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+  transition: background-color 0.3s;
+}
+
+.continuar-btn:hover {
+  background-color: violet;
 }
 
 /* SECCIÓN FORMULARIO */
