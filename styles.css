@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color:  #d3d3d3;
 }
 
 .login-container {
@@ -47,7 +47,7 @@ input[type="password"] {
 }
 
 button {
-  background-color: violet;
+  background-color: darkviolet;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -93,7 +93,7 @@ button:hover {
 }
 
 .btn {
-  background-color: violet;
+  background-color: darkviolet;
   color: white;
   padding: 15px 30px;
   text-transform: uppercase;
@@ -110,7 +110,7 @@ button:hover {
 .video-page {
   background-color: #222;
   color: white;
-  padding: 20px;
+  padding:   100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: #333;
+  color: white;
 }
 
 button {
@@ -197,10 +197,9 @@ button:hover {
 /* SECCIÓN GRACIAS */
 .gracias-page {
   background-image: url('assets/images/Capturap.PNG');
-  background-size: cover;
+ background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: white;
   padding: 40px;
   display: flex;
   justify-content: center;
