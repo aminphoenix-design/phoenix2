@@ -16,7 +16,7 @@ a {
 
 /* LOGIN PAGE */
 .login-page {
-  background-image: url('assets/images/phoenix.PNG');
+  background-image: url('assets/images/phoenix.PNG'); /* Aquí va el fondo que deseas */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
