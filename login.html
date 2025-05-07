@@ -24,7 +24,8 @@
       const contraseña = document.getElementById('contraseña').value;
       
       if (usuario === "amin" && contraseña === "phoenixframe") {
-        return true; // El login es correcto, permite la redirección
+        window.location.href = "index.html"; // Redirige a la página principal si el login es correcto
+        return false; // Evita el envío del formulario
       } else {
         alert("Usuario o contraseña incorrectos.");
         return false; // Bloquea la redirección
