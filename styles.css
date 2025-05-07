@@ -8,25 +8,17 @@ body {
   flex-direction: column;
 }
 
-h1, h2 {
-  font-weight: bold;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* SECCIÓN LOGIN */
 .login-page {
-  background-image: url('assets/images/phoenix.PNG'); /* Fondo del login */
+  background-image: url('assets/images/phoenix.PNG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  color: white; /* Aseguramos que el texto sea blanco para visibilidad */
+  color: white;
 }
 
 .login-container {
@@ -232,9 +224,4 @@ button:hover {
   font-size: 1.2rem;
   margin-top: 10px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.gracias-container p {
-  font-size: 1.2rem;
-  margin-top: 10px;
 }
