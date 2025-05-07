@@ -5,44 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    function validarLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById('usuario').value;
+      const pass = document.getElementById('contrasena').value;
+
+      if (user === 'amin' && pass === 'phoenixframe') {
+        window.location.href = 'index.html';
+      } else {
+        alert('Usuario o contraseña incorrectos');
+      }
+    }
+  </script>
 </head>
-<body class="formulario-dark login-bg">
+<body class="login-page">
   <div class="form-container dark">
     <h1>¿Estás preparado?</h1>
-    <form id="loginForm">
-      <label for="usuario">Usuario:</label>
-      <input type="text" id="usuario" required />
-
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" required />
-
+    <form onsubmit="validarLogin(event)">
+      <input type="text" id="usuario" placeholder="Usuario" required />
+      <input type="password" id="contrasena" placeholder="Contraseña" required />
       <button type="submit">Entrar</button>
-      <p id="error" style="color:red; margin-top:10px;"></p>
     </form>
   </div>
-
-  <script>
-    // Si ya está logueado, redirige automáticamente
-    if (localStorage.getItem("logueado") === "true") {
-      window.location.href = "index.html";
-    }
-
-    const form = document.getElementById("loginForm");
-    const errorText = document.getElementById("error");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const usuario = document.getElementById("usuario").value.trim();
-      const password = document.getElementById("password").value.trim();
-
-      if (usuario === "amin" && password === "phoenixframe") {
-        localStorage.setItem("logueado", "true");
-        window.location.href = "index.html";
-      } else {
-        errorText.textContent = "Credenciales incorrectas. Intenta de nuevo.";
-      }
-    });
-  </script>
 </body>
 </html>
+
