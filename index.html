@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PhoenixFrame</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Comprobar si el usuario ya ha iniciado sesión
+    window.onload = function() {
+      if (!localStorage.getItem("logueado")) {
+        window.location.href = "login.html"; // Redirige al login si no está logueado
+      }
+    }
+  </script>
 </head>
 <body class="index-page">
   <div class="hero">
