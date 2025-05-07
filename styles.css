@@ -1,9 +1,36 @@
+/* ==================== FONDOS POR PÁGINA ==================== */
+body.login-bg,
+body.formulario-bg,
+body.gracias-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Fondos específicos */
+body.login-bg {
+    background-image: url('assets/images/Capturap.PNG');
+}
+
+body.formulario-bg {
+    background-image: url('assets/images/Capturap2.PNG');
+}
+
+body.gracias-bg {
+    background-image: url('assets/images/Capturap.PNG');
+}
+
 /* ==================== INDEX PAGE ==================== */
 .index-page {
     background-image: url('assets/images/intro.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     margin: 0;
     font-family: 'Georgia', serif;
@@ -42,7 +69,6 @@
     background-color: #8a5c36;
 }
 
-
 /* ==================== VIDEO PAGE ==================== */
 .video-page {
     margin: 0;
@@ -73,46 +99,17 @@
     color: white;
 }
 
-
-/* ==================== FONDOS PERSONALIZADOS ==================== */
-.login-bg {
-    background-image: url('assets/images/Capturap.PNG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.formulario-bg {
-    background-image: url('assets/images/Capturap2.PNG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.gracias-bg {
-    background-image: url('assets/images/Capturap.PNG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
 /* ==================== FORMULARIO OSCURO ==================== */
 .formulario-dark {
     color: #ffffff;
-    margin: 0;
     font-family: 'Georgia', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .form-container.dark {
-    background-color: rgba(26, 26, 26, 0.85);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 50px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+    box-shadow: 0 4px 20px rgba(255,255,255,0.1);
     text-align: center;
     width: 100%;
     max-width: 600px;
@@ -120,7 +117,7 @@
 
 label {
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
     display: block;
     text-align: left;
     margin-bottom: 6px;
@@ -152,14 +149,14 @@ button:hover {
     background-color: #8a5c36;
 }
 
-
 /* ==================== GRACIAS ==================== */
 .thank-you-box {
-    background-color: rgba(26, 26, 26, 0.85);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 50px;
     border-radius: 12px;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     max-width: 600px;
     width: 90%;
+    box-shadow: 0 4px 20px rgba(255,255,255,0.1);
 }
