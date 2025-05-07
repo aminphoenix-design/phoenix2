@@ -26,6 +26,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white; /* Aseguramos que el texto sea blanco para visibilidad */
 }
 
 .login-container {
@@ -159,6 +160,7 @@ button:hover {
 .formulario-container h1 {
   margin-bottom: 20px;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 input[type="text"],
@@ -223,6 +225,13 @@ button:hover {
 .gracias-container h1 {
   margin-bottom: 20px;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.gracias-container p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .gracias-container p {
