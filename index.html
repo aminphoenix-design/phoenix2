@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhoenixFrame</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    // Comprobar si el usuario ya ha iniciado sesión
-    window.onload = function() {
-      if (!localStorage.getItem("logueado")) {
-        window.location.href = "login.html"; // Redirige al login si no está logueado
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="index-page">
-  <div class="hero">
-    <h1>LA PUERTA A TU<br> PASADO, PRESENTE<br> Y CON NOSOTROS, FUTURO</h1>
-    <a href="video.html" class="btn">FUTURO</a>
+<body>
+
+<!-- SECCIÓN VIDEO -->
+<div class="video-page">
+  <div class="video-container">
+    <div class="video-content">
+      <iframe id="video" src="https://www.youtube.com/embed/tu_video_id?autoplay=1&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <button class="continuar-btn" onclick="redirigirAlFormulario()">Continuar</button>
   </div>
+</div>
+
+<!-- SECCIÓN FORMULARIO (inicialmente oculta) -->
+<div id="formulario" class="formulario-page" style="display: none;">
+  <div class="formulario-container">
+    <h1>Formulario</h1>
+    <form action="#">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Comentario" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Función para redirigir al formulario
+  function redirigirAlFormulario() {
+    // Ocultar la sección del video
+    document.querySelector('.video-page').style.display = 'none';
+    
+    // Mostrar la sección del formulario
+    document.getElementById('formulario').style.display = 'block';
+  }
+
+  // Evento de escucha para detectar cuando el video termine
+  document.getElementById('video').addEventListener('ended', function() {
+    redirigirAlFormulario();
+  });
+</script>
+
 </body>
 </html>
