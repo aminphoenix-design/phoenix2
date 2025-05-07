@@ -110,7 +110,7 @@ button:hover {
 .video-page {
   background-color: #222;
   color: white;
-  padding:   100px;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +197,7 @@ button:hover {
 /* SECCIÓN GRACIAS */
 .gracias-page {
   background-image: url('assets/images/Capturap.PNG');
- background-size: cover;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 40px;
@@ -219,12 +219,5 @@ button:hover {
 .gracias-container h1 {
   margin-bottom: 20px;
   color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.gracias-container p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
+  text-shadow: 2px 2px 5px rgba(0,
 
