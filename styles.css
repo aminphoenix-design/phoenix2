@@ -110,19 +110,17 @@ button:hover {
 .video-page {
   background-color: #222;
   color: white;
-  padding: 0;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Esto asegurará que el video no se desborde */
 }
 
-.video-container {
-  position: relative;
+.video-content {
   width: 100%;
-  height: 100%;
-  overflow: hidden; /* Para asegurar que el video no se desborde */
+  max-width: 1920px; /* 1920px para el video */
+  height: 1080px; /* 1080px para el video */
 }
 
 .video-content iframe {
@@ -130,33 +128,6 @@ button:hover {
   height: 100%;
   border: none;
   border-radius: 8px;
-  transform: scale(1.1); /* Aplicamos zoom al iframe */
-  transition: transform 0.3s ease-in-out;
-}
-
-.video-content iframe:hover {
-  transform: scale(1.15); /* Al pasar el ratón sobre el video, se hará más grande */
-}
-
-/* Botón continuar */
-.continuar-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: darkviolet;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  width: auto;
-  transition: background-color 0.3s;
-}
-
-.continuar-btn:hover {
-  background-color: violet;
 }
 
 /* SECCIÓN FORMULARIO */
@@ -196,7 +167,7 @@ input[type="tel"] {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: white;  /* Texto blanco */
+  color: #333;
 }
 
 textarea {
@@ -206,7 +177,7 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: white; /* Texto blanco */
+  color: white;
 }
 
 button {
@@ -249,4 +220,18 @@ button:hover {
   margin-bottom: 20px;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.gracias-container .btn {
+  background-color: darkviolet;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gracias-container .btn:hover {
+  background-color: violet;
 }
