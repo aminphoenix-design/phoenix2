@@ -110,17 +110,18 @@ button:hover {
 .video-page {
   background-color: #222;
   color: white;
-  padding: 100px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Esto asegurará que el video no se desborde */
 }
 
 .video-content {
   width: 100%;
-  max-width: 1920px; /* 1920px para el video */
-  height: 1080px; /* 1080px para el video */
+  height: 100%;
+  transform: scale(1.1); /* Aplicamos un pequeño zoom */
 }
 
 .video-content iframe {
@@ -128,6 +129,12 @@ button:hover {
   height: 100%;
   border: none;
   border-radius: 8px;
+  transform: scale(1.1); /* También aplicamos zoom al iframe */
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-content iframe:hover {
+  transform: scale(1.15); /* Al pasar el ratón sobre el video, se hará más grande */
 }
 
 /* SECCIÓN FORMULARIO */
@@ -167,7 +174,7 @@ input[type="tel"] {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: #333;
+  color: white;  /* Texto blanco */
 }
 
 textarea {
@@ -177,7 +184,7 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: white;
+  color: white; /* Texto blanco */
 }
 
 button {
