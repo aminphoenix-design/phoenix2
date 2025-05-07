@@ -11,6 +11,40 @@ body.login-bg {
   align-items: center;
   font-family: 'Georgia', serif;
 }
+/* ==================== INDEX ==================== */
+.index-page {
+  background-image: url('assets/images/intro.png'); /* Fondo de la página */
+  background-size: cover; /* Asegura que el fondo cubra toda la página */
+  background-position: center;
+  height: 100vh; /* Altura de la página completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  line-height: 1.5em;
+  color: white;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra para el texto */
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #a67c52; /* Color del botón */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #8a5c36; /* Color del botón al pasar el cursor */
+}
 
 /* Fondo para formulario */
 body.formulario-bg {
