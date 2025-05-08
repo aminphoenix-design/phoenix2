@@ -1,10 +1,11 @@
 /* GENERALES */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   min-height: 100vh;
   background-color: #f4f4f4;
@@ -12,30 +13,27 @@ body {
   flex-direction: column;
 }
 
-.btn {
-  background-color: darkviolet;
-  color: white;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: violet;
-}
-
-/* SECCIÓN LOGIN */
-.login-page {
-  background-image: url('assets/images/Capturap.PNG');
+/* CONTENEDOR GENERAL PARA PÁGINAS COMPLETAS */
+body.index-page,
+body.video-page,
+body.formulario-page,
+body.login-page,
+body.gracias-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 1024px;
+  min-width: 1536px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* LOGIN */
+.login-page {
+  background-image: url('assets/images/Capturap.PNG');
   color: #d3d3d3;
 }
 
@@ -64,7 +62,7 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
 
 button {
@@ -81,77 +79,60 @@ button:hover {
   background-color: darkviolet;
 }
 
-/* SECCIÓN INDEX */
+/* INDEX */
 .index-page {
   background-image: url('assets/images/intro.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: goldenrod;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  overflow: hidden;
 }
 
-.index-content {
+.hero {
+  padding: 20px;
   background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
   border-radius: 10px;
-  width: 60%;
 }
 
-.index-content h1 {
+.hero h1 {
   font-size: 3rem;
   margin-bottom: 30px;
   color: goldenrod;
 }
 
-.index-content p {
-  font-size: 1.2rem;
-  color: goldenrod;
+.btn {
+  background-color: darkviolet;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* SECCIÓN VIDEO */
+.btn:hover {
+  background-color: violet;
+}
+
+/* VIDEO */
 .video-page {
-  background-color: #000;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
+  background-color: #222;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .fullscreen-video {
-  position: absolute;
   width: 100%;
-  height: 100%;
+  max-width: 1536px;
+  height: auto;
+  max-height: 1024px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
-.video-btn {
-  position: absolute;
-  bottom: 50px;
-  z-index: 1;
-}
-
-/* SECCIÓN FORMULARIO */
+/* FORMULARIO */
 .formulario-page {
-  background-image: url('assets/images/Captupap2.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-image: url('assets/images/formulario-bg.jpg'); /* Usa la imagen editada */
 }
 
 .formulario-container {
@@ -169,24 +150,16 @@ button:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-label {
+.formulario-container label {
   color: white;
   display: block;
-  text-align: left;
   margin-top: 10px;
+  text-align: left;
 }
 
-/* SECCIÓN GRACIAS */
+/* GRACIAS */
 .gracias-page {
   background-image: url('assets/images/Capturap.PNG');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .gracias-container {
@@ -218,38 +191,18 @@ label {
   background-color: violet;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1536px) {
-  .index-page,
-  .video-page {
-    background-size: cover;
-  }
-
-  .fullscreen-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .login-container,
   .formulario-container,
-  .gracias-container {
+  .login-container {
     width: 90%;
   }
 
-  .index-content {
-    width: 90%;
-  }
-
-  .btn,
-  button {
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
-
-  .index-content h1 {
+  .hero h1 {
     font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
   }
 }
