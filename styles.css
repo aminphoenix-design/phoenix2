@@ -3,16 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
 /* GENERALES */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  height: 100vh;
   background-color: #000;
+  color: #FFD700;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFD700;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, h2, h3, p, label, a {
@@ -22,9 +28,10 @@ h1, h2, h3, p, label, a {
     2px 2px 1px #5C4500,
     3px 3px 2px #2F1D00;
   font-weight: 700;
+  margin: 0.5em 0;
+  text-align: center;
 }
 
-/* Botones */
 .btn, button {
   background-color: #FFD700;
   color: #000;
@@ -45,7 +52,7 @@ h1, h2, h3, p, label, a {
 
 /* LOGIN */
 .login-page {
-  background-image: url('assets/images/login-background.jpg');
+  background-image: url('assets/images/Captupap.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -79,7 +86,7 @@ input[type="password"] {
 
 /* INDEX */
 .index-page {
-  background-image: url('assets/images/index-background.jpg');
+  background-image: url('assets/images/intro.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -91,7 +98,6 @@ input[type="password"] {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .index-page h1 {
@@ -127,7 +133,7 @@ input[type="password"] {
 .formulario-page {
   background-image: url('assets/images/Captupap2.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
