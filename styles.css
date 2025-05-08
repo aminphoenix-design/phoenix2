@@ -1,16 +1,49 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
 /* GENERALES */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Playfair Display', serif;
   height: 100vh;
-  background-color: #000; /* Fondo negro por defecto */
+  background-color: #000;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* SECCIÓN LOGIN */
+h1, h2, h3, p, label, a {
+  color: #FFD700;
+  text-shadow:
+    1px 1px 0 #8B7500,
+    2px 2px 1px #5C4500,
+    3px 3px 2px #2F1D00;
+  font-weight: 700;
+}
+
+.btn, button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+}
+
+.btn:hover, button:hover {
+  background-color: #FFC300;
+  transform: scale(1.05);
+}
+
+/* LOGIN */
 .login-page {
-  background-image: url('assets/images/Captupap.png');
+  background-image: url('assets/images/login-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -18,7 +51,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d3d3d3;
 }
 
 .login-container {
@@ -27,12 +59,6 @@ body {
   border-radius: 10px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.login-container h1 {
-  margin-bottom: 20px;
-  color: white;
 }
 
 input[type="text"],
@@ -46,106 +72,65 @@ input[type="password"] {
   color: #333;
 }
 
-button {
-  background-color: darkviolet;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  background-color: violet;
-}
-
-/* SECCIÓN INDEX */
+/* INDEX */
 .index-page {
-  background-image: url('assets/images/intro.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: black;
+  background-image: url('assets/images/index-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   height: 100vh;
+  width: 100vw;
+  max-width: 1024px;
+  max-height: 1536px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
-.index-content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-  width: 60%;
-}
-
-.index-content h1 {
+.index-page h1 {
   font-size: 3rem;
-  margin-bottom: 30px;
-  color: goldenrod;
+  line-height: 1.3;
 }
 
-.index-content p {
-  font-size: 1.2rem;
-  color: goldenrod;
-}
-
-.btn {
-  background-color: darkviolet;
-  color: white;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: violet;
-}
-
-/* SECCIÓN VIDEO */
+/* VIDEO */
 .video-page {
-  background-image: url('assets/images/intro.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: black;
-  padding: 20px;
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1024px;
+  max-height: 1536px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
 }
 
 .fullscreen-video {
   width: 100%;
-  max-width: 100%;
   height: auto;
   max-height: 80vh;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .video-btn {
-  padding: 15px 30px;
+  margin-top: 20px;
 }
 
-/* SECCIÓN FORMULARIO */
+/* FORMULARIO */
 .formulario-page {
   background-image: url('assets/images/Captupap2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: black;
-  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1024px;
+  max-height: 1536px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .formulario-container {
@@ -154,27 +139,11 @@ button:hover {
   border-radius: 10px;
   width: 400px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.formulario-container h1 {
-  margin-bottom: 20px;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-}
-
+input[type="tel"],
 textarea {
   width: 100%;
   padding: 12px;
@@ -182,34 +151,19 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: #fff;
-  color: #333;
+  color: #000;
 }
 
-button {
-  background-color: violet;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  background-color: darkviolet;
-}
-
-/* SECCIÓN GRACIAS */
+/* GRACIAS */
 .gracias-page {
   background-image: url('assets/images/Capturap.PNG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 40px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .gracias-container {
@@ -218,25 +172,24 @@ button:hover {
   border-radius: 10px;
   width: 60%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .gracias-container h1 {
   margin-bottom: 20px;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.gracias-container .btn {
-  background-color: darkviolet;
-  color: white;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .formulario-container,
+  .login-container {
+    width: 90%;
+  }
 
-.gracias-container .btn:hover {
-  background-color: violet;
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn, button {
+    padding: 12px 24px;
+  }
 }
