@@ -1,156 +1,33 @@
 /* GENERALES */
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
-  padding: 0;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #000;
-}
-
-/* PÁGINAS BASE */
-body.index-page,
-body.video-page,
-body.formulario-page,
-body.login-page,
-body.gracias-page {
+  height: 100vh;
+  background-color: #000; /* Fondo negro por defecto */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 20px;
-}
-
-/* INDEX */
-.index-page {
-  background-image: url('assets/images/intro.png');
-  color: goldenrod;
-  text-align: center;
-}
-
-.hero {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-  max-width: 800px;
-  width: 100%;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: goldenrod;
-}
-
-.btn {
-  background-color: darkviolet;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background-color: violet;
-}
-
-/* VIDEO */
-.video-page {
-  background-color: #000;
   flex-direction: column;
 }
 
-.fullscreen-video {
-  width: 100%;
-  max-width: 1536px;
-  max-height: 1024px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
-
-/* FORMULARIO */
-.formulario-page {
-  background-image: url('assets/images/Captupap2.png');
-}
-
-.formulario-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  color: white;
-}
-
-.formulario-container h1 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-}
-
-.formulario-container label {
-  display: block;
-  margin: 15px 0 5px;
-  color: white;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-  background: #fff;
-  color: #000;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: violet;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: darkviolet;
-}
-
-/* LOGIN */
+/* SECCIÓN LOGIN */
 .login-page {
   background-image: url('assets/images/Capturap.PNG');
-  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d3d3d3;
 }
 
 .login-container {
   background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 350px;
+  width: 300px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .login-container h1 {
@@ -158,53 +35,208 @@ button:hover {
   color: white;
 }
 
-/* GRACIAS */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  color: #333;
+}
+
+button {
+  background-color: darkviolet;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: violet;
+}
+
+/* SECCIÓN INDEX */
+.index-page {
+  background-image: url('assets/images/intro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.index-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.index-content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: goldenrod;
+}
+
+.index-content p {
+  font-size: 1.2rem;
+  color: goldenrod;
+}
+
+.btn {
+  background-color: darkviolet;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: violet;
+}
+
+/* SECCIÓN VIDEO */
+.video-page {
+  background-image: url('assets/images/intro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fullscreen-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.video-btn {
+  padding: 15px 30px;
+}
+
+/* SECCIÓN FORMULARIO */
+.formulario-page {
+  background-image: url('assets/images/Captupap2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-container h1 {
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  background-color: violet;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: darkviolet;
+}
+
+/* SECCIÓN GRACIAS */
 .gracias-page {
   background-image: url('assets/images/Capturap.PNG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .gracias-container {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
+  width: 60%;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .gracias-container h1 {
   margin-bottom: 20px;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .gracias-container .btn {
   background-color: darkviolet;
   color: white;
   padding: 15px 30px;
-  border-radius: 5px;
   text-transform: uppercase;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .gracias-container .btn:hover {
   background-color: violet;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .formulario-container,
-  .login-container,
-  .gracias-container {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-  }
 }
