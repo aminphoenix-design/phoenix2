@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #FFD700;
 }
 
 h1, h2, h3, p, label, a {
@@ -23,6 +24,7 @@ h1, h2, h3, p, label, a {
   font-weight: 700;
 }
 
+/* Botones */
 .btn, button {
   background-color: #FFD700;
   color: #000;
@@ -47,7 +49,10 @@ h1, h2, h3, p, label, a {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  width: 100vw;
   height: 100vh;
+  max-width: 1024px;
+  max-height: 1536px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,8 +83,8 @@ input[type="password"] {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   max-width: 1024px;
   max-height: 1536px;
   display: flex;
@@ -97,8 +102,8 @@ input[type="password"] {
 /* VIDEO */
 .video-page {
   background-color: #000;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   max-width: 1024px;
   max-height: 1536px;
   display: flex;
@@ -122,10 +127,10 @@ input[type="password"] {
 .formulario-page {
   background-image: url('assets/images/Captupap2.png');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   max-width: 1024px;
   max-height: 1536px;
   display: flex;
@@ -160,7 +165,10 @@ textarea {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  width: 100vw;
   height: 100vh;
+  max-width: 1024px;
+  max-height: 1536px;
   display: flex;
   justify-content: center;
   align-items: center;
