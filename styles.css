@@ -8,6 +8,20 @@ body {
   flex-direction: column;
 }
 
+.btn {
+  background-color: darkviolet;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: violet;
+}
+
 /* SECCIÓN LOGIN */
 .login-page {
   background-image: url('assets/images/Capturap.PNG');
@@ -18,7 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:  #d3d3d3;
+  color: #d3d3d3;
 }
 
 .login-container {
@@ -36,18 +50,21 @@ body {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #d3d3d3;
-  color: #333;
+  background-color: #fff;
+  color: #000;
 }
 
 button {
-  background-color: darkviolet;
+  background-color: violet;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -63,15 +80,18 @@ button:hover {
 /* SECCIÓN INDEX */
 .index-page {
   background-image: url('assets/images/intro.png');
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
   background-position: center;
   background-attachment: fixed;
   color: goldenrod;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .index-content {
@@ -92,43 +112,29 @@ button:hover {
   color: goldenrod;
 }
 
-.btn {
-  background-color: darkviolet;
-  color: white;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: darkviolet;
-}
-
 /* SECCIÓN VIDEO */
 .video-page {
-  background-color: #222;
-  color: white;
-  padding: 100px;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.video-content {
-  width: 100%;
-  max-width: 1920px;
+.fullscreen-video {
+  position: absolute;
+  width: 1920px;
   height: 1080px;
+  object-fit: cover;
 }
 
-.video-content iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
+.video-btn {
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
 }
 
 /* SECCIÓN FORMULARIO */
@@ -159,50 +165,11 @@ button:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.formulario-container label {
+label {
+  color: white;
   display: block;
-  margin-top: 15px;
-  color: white;
-  font-weight: bold;
   text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid white;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #ccc;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.formulario-container button {
-  background-color: violet;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.formulario-container button:hover {
-  background-color: darkviolet;
+  margin-top: 10px;
 }
 
 /* SECCIÓN GRACIAS */
@@ -241,7 +208,6 @@ textarea {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .gracias-container .btn:hover {
