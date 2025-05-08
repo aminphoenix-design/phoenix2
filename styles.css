@@ -22,7 +22,7 @@ body {
 }
 
 .login-container {
-  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
   width: 300px;
@@ -42,7 +42,7 @@ input[type="password"] {
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #d3d3d3; /* Tono grisáceo */
+  background-color: #d3d3d3;
   color: #333;
 }
 
@@ -66,7 +66,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: goldenrod;  /* Texto dorado */
+  color: goldenrod;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@ button:hover {
 }
 
 .index-content {
-  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 10px;
   width: 60%;
@@ -84,12 +84,12 @@ button:hover {
 .index-content h1 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: goldenrod;  /* Título en dorado */
+  color: goldenrod;
 }
 
 .index-content p {
   font-size: 1.2rem;
-  color: goldenrod;  /* Texto en dorado */
+  color: goldenrod;
 }
 
 .btn {
@@ -100,6 +100,7 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -119,8 +120,8 @@ button:hover {
 
 .video-content {
   width: 100%;
-  max-width: 1920px; /* 1920px para el video */
-  height: 1080px; /* 1080px para el video */
+  max-width: 1920px;
+  height: 1080px;
 }
 
 .video-content iframe {
@@ -144,7 +145,7 @@ button:hover {
 }
 
 .formulario-container {
-  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
   width: 400px;
@@ -158,29 +159,38 @@ button:hover {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
+.formulario-container label {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: left;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
+  border: 1px solid white;
 }
 
-button {
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.formulario-container button {
   background-color: violet;
   color: white;
   padding: 12px 20px;
@@ -188,9 +198,10 @@ button {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  margin-top: 20px;
 }
 
-button:hover {
+.formulario-container button:hover {
   background-color: darkviolet;
 }
 
@@ -208,7 +219,7 @@ button:hover {
 }
 
 .gracias-container {
-  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
   width: 60%;
@@ -230,6 +241,7 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .gracias-container .btn:hover {
